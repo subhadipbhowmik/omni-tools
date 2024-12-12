@@ -4,35 +4,34 @@ import { Menu, X } from "lucide-react";
 
 const Navbar = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const navItems = [
-    { name: "Features", href: "/features" },
-    { name: "Pricing", href: "#pricing" },
-    { name: "About", href: "#about" },
-    { name: "Contact", href: "#contact" },
-  ];
+  const navItems = [{ name: "All Tools", href: "/tools" }];
 
   return (
     <nav className="bg-white shadow-sm">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-16">
           <div className="flex">
-            <div className="flex-shrink-0 flex items-center">
-              {/* Logo */}
-              <svg
-                className="h-8 w-auto text-indigo-600"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M13 10V3L4 14h7v7l9-11h-7z"
-                />
-              </svg>
-              <span className="ml-2 text-xl font-bold text-gray-900">SEO</span>
-            </div>
+            <Link to="/" className="flex-shrink-0 flex items-center">
+              <div className="flex-shrink-0 flex items-center">
+                {/* Logo */}
+                <svg
+                  className="h-8 w-auto text-indigo-600"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M13 10V3L4 14h7v7l9-11h-7z"
+                  />
+                </svg>
+                <span className="ml-2 text-xl font-bold text-gray-900">
+                  SEO
+                </span>
+              </div>
+            </Link>
             <div className="hidden sm:ml-6 sm:flex sm:space-x-8">
               {navItems.map((item) => (
                 <Link
@@ -46,9 +45,11 @@ const Navbar = () => {
             </div>
           </div>
           <div className="hidden sm:ml-6 sm:flex sm:items-center">
-            <button className="text-white  rounded-full bg-indigo-600 px-4 py-2 border">
-              All Tools
-            </button>
+            <Link to="/tools">
+              <button className="text-white  rounded-full bg-indigo-600 px-4 py-2 border">
+                All Tools
+              </button>
+            </Link>
           </div>
           <div className="-mr-2 flex items-center sm:hidden">
             <button

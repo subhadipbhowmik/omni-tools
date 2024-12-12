@@ -10,7 +10,7 @@ const HeroSection = () => {
               Unlock SEO Power for Your Brand
             </span>
             <a
-              href="#"
+              href="/tools"
               className="w-8 h-8 rounded-full flex justify-center items-center bg-indigo-600"
             >
               <svg
@@ -39,10 +39,10 @@ const HeroSection = () => {
             wealth easily.
           </p>
           <a
-            href="javascript:;"
+            href="/tools"
             className="w-full md:w-auto mb-14 inline-flex items-center justify-center py-3 px-7 text-base font-semibold text-center text-white rounded-full bg-indigo-600 shadow-xs hover:bg-indigo-700 transition-all duration-500"
           >
-            Create an account
+            Use Tools
             <svg
               className="ml-2"
               width={20}

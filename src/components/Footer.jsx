@@ -91,7 +91,7 @@ const Footer = () => {
               any query ?
             </p>
             <a
-              href="javascript:;"
+              href="#"
               className="py-2.5 px-5 h-9 block w-fit bg-indigo-600 rounded-full shadow-sm text-xs text-white mx-auto transition-all  duration-500 hover:bg-indigo-700 lg:mx-0"
             >
               Contact us
@@ -102,26 +102,17 @@ const Footer = () => {
             <h4 className="text-lg text-gray-900 font-medium mb-7">Pagedone</h4>
             <ul className="text-sm  transition-all duration-500">
               <li className="mb-6">
-                <a
-                  href="javascript:;"
-                  className="text-gray-600 hover:text-gray-900"
-                >
+                <a href="#" className="text-gray-600 hover:text-gray-900">
                   Home
                 </a>
               </li>
               <li className="mb-6">
-                <a
-                  href="javascript:;"
-                  className=" text-gray-600 hover:text-gray-900"
-                >
+                <a href="#" className=" text-gray-600 hover:text-gray-900">
                   About
                 </a>
               </li>
               <li>
-                <a
-                  href="javascript:;"
-                  className=" text-gray-600 hover:text-gray-900"
-                >
+                <a href="#" className=" text-gray-600 hover:text-gray-900">
                   Pricing
                 </a>
               </li>
@@ -132,26 +123,17 @@ const Footer = () => {
             <h4 className="text-lg text-gray-900 font-medium mb-7">Products</h4>
             <ul className="text-sm  transition-all duration-500">
               <li className="mb-6">
-                <a
-                  href="javascript:;"
-                  className="text-gray-600 hover:text-gray-900"
-                >
+                <a href="#" className="text-gray-600 hover:text-gray-900">
                   Figma UI System
                 </a>
               </li>
               <li className="mb-6">
-                <a
-                  href="javascript:;"
-                  className=" text-gray-600 hover:text-gray-900"
-                >
+                <a href="#" className=" text-gray-600 hover:text-gray-900">
                   Icons Assets
                 </a>
               </li>
               <li>
-                <a
-                  href="javascript:;"
-                  className=" text-gray-600 hover:text-gray-900"
-                >
+                <a href="#" className=" text-gray-600 hover:text-gray-900">
                   Responsive Blocks
                 </a>
               </li>
@@ -162,26 +144,17 @@ const Footer = () => {
             <h4 className="text-lg text-gray-900 font-medium mb-7">Support</h4>
             <ul className="text-sm  transition-all duration-500">
               <li className="mb-6">
-                <a
-                  href="javascript:;"
-                  className="text-gray-600 hover:text-gray-900"
-                >
+                <a href="#" className="text-gray-600 hover:text-gray-900">
                   Customer Support
                 </a>
               </li>
               <li className="mb-6">
-                <a
-                  href="javascript:;"
-                  className=" text-gray-600 hover:text-gray-900"
-                >
+                <a href="#" className=" text-gray-600 hover:text-gray-900">
                   Terms &amp; Conditions
                 </a>
               </li>
               <li>
-                <a
-                  href="javascript:;"
-                  className=" text-gray-600 hover:text-gray-900"
-                >
+                <a href="#" className=" text-gray-600 hover:text-gray-900">
                   Privacy Policy
                 </a>
               </li>
@@ -196,7 +169,7 @@ const Footer = () => {
               Subscribe to get the latest news from us
             </p>
             <a
-              href="javascript:;"
+              href="#"
               className="flex items-center justify-center gap-2 border border-indigo-600 rounded-full py-3 px-6 w-fit lg:mx-0  text-sm text-indigo-600 font-semibold transition-all duration-500 hover:bg-indigo-50"
             >
               Subscribe
@@ -227,7 +200,7 @@ const Footer = () => {
             </span>
             <div className="flex mt-4 space-x-4 sm:justify-center lg:mt-0 ">
               <a
-                href="javascript:;"
+                href="#"
                 className="w-8 h-8 rounded-full transition-all duration-500 flex justify-center items-center bg-[#33CCFF] hover:bg-gray-900"
               >
                 <svg
@@ -247,7 +220,7 @@ const Footer = () => {
                 </svg>
               </a>
               <a
-                href="javascript:;"
+                href="#"
                 className="relative w-8 h-8 rounded-full transition-all duration-500 flex justify-center items-center bg-[linear-gradient(45deg,#FEE411_6.9%,#FEDB16_10.98%,#FEC125_17.77%,#FE983D_26.42%,#FE5F5E_36.5%,#FE2181_46.24%,#9000DC_85.57%)]  hover:bg-gradient-to-b from-gray-900 to-gray-900  
                   "
               >
@@ -264,7 +237,7 @@ const Footer = () => {
                 </svg>
               </a>
               <a
-                href="javascript:;"
+                href="#"
                 className="relative w-8 h-8 rounded-full transition-all duration-500 flex justify-center items-center bg-[#337FFF]  hover:bg-gray-900 "
               >
                 <svg
@@ -280,7 +253,7 @@ const Footer = () => {
                 </svg>
               </a>
               <a
-                href="javascript:;"
+                href="#"
                 className="relative w-8 h-8 rounded-full transition-all duration-500 flex justify-center items-center bg-[#FF0000]  hover:bg-gray-900 "
               >
                 <svg
