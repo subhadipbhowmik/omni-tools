@@ -8,6 +8,8 @@ import DomainAgeChecker from "./pages/DomainAgeChecker";
 import { Toaster } from "react-hot-toast";
 import DNSRecordChecker from "./pages/DNSRecordChecker";
 import LinkAnalyzer from "./pages/LinkAnalyzer";
+import PageSizeChecker from "./pages/PageSizeChecker";
+import OpenGraphChecker from "./pages/OpenGraphChecker";
 
 function App() {
   return (
@@ -20,6 +22,8 @@ function App() {
         <Route path="/domain-age-checker" element={<DomainAgeChecker />} />
         <Route path="/dns-record-checker" element={<DNSRecordChecker />} />
         <Route path="/link-analyzer" element={<LinkAnalyzer />} />
+        <Route path="/page-size-checker" element={<PageSizeChecker />} />
+        <Route path="/open-graph-checker" element={<OpenGraphChecker />} />
       </Routes>
       <Footer />
     </>
