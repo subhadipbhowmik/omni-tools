@@ -1,13 +1,24 @@
 import React, { useState } from "react";
 import axios from "axios";
-import { toast } from "react-toastify";
+import { toast } from "react-hot-toast";
 
 function DomainAgeChecker() {
   const [domain, setDomain] = useState("");
   const [domainDetails, setDomainDetails] = useState(null);
   const [loading, setLoading] = useState(false);
 
-  // Handle form submission to fetch domain details
+  // Fetch environment variables
+  const apiUrl = import.meta.env.VITE_API_URL_DOMAIN_AGE_CHECKER;
+  const apiKey = import.meta.env.VITE_RAPIDAPI_KEY;
+  const apiHost = import.meta.env.VITE_RAPIDAPI_HOST;
+
+  // Validate domain format
+  const isValidDomain = (domain) => {
+    const domainPattern = /^[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+    return domainPattern.test(domain);
+  };
+
+  // Handle form submission
   const handleSubmit = async (event) => {
     event.preventDefault();
 
@@ -16,26 +27,28 @@ function DomainAgeChecker() {
       return;
     }
 
-    setLoading(true);
-    try {
-      const response = await axios.get(
-        "https://seo-api2.p.rapidapi.com/domain-age-checker",
-        {
-          params: { domain },
-          headers: {
-            "x-rapidapi-key":
-              "043c9c743emsh4b47b9432d7c746p1d2cf7jsn4c64974428a6",
-            "x-rapidapi-host": "seo-api2.p.rapidapi.com",
-          },
-        }
-      );
+    if (!isValidDomain(domain)) {
+      toast.error("Please enter a valid domain!");
+      return;
+    }
 
-      // Save domain details to state
+    setLoading(true);
+    setDomainDetails(null);
+
+    try {
+      const response = await axios.get(apiUrl, {
+        params: { domain },
+        headers: {
+          "x-rapidapi-key": apiKey,
+          "x-rapidapi-host": apiHost,
+        },
+      });
+
       setDomainDetails(response.data);
       toast.success("Domain details fetched successfully!");
     } catch (error) {
       console.error(error);
-      toast.error("Failed to fetch domain details.");
+      toast.error("Failed to fetch domain details. Please try again.");
     } finally {
       setLoading(false);
     }

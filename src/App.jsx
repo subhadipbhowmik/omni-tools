@@ -5,10 +5,12 @@ import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import AllTools from "./pages/AllTools";
 import DomainAgeChecker from "./pages/DomainAgeChecker";
+import { Toaster } from "react-hot-toast";
 
 function App() {
   return (
     <>
+      <Toaster position="bottom-center" reverseOrder={false} />
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />

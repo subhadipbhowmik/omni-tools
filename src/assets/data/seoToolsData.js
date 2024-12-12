@@ -10,7 +10,7 @@ export default [
   {
     id: 1,
     icon: "https://cdn-icons-png.flaticon.com/512/25/25231.png",
-    title: "SEO Tools",
+    title: "DNS Record Checker",
     pageLink: "/tools/seo-tools",
   },
   {
