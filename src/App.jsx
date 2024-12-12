@@ -6,6 +6,8 @@ import Footer from "./components/Footer";
 import AllTools from "./pages/AllTools";
 import DomainAgeChecker from "./pages/DomainAgeChecker";
 import { Toaster } from "react-hot-toast";
+import DNSRecordChecker from "./pages/DNSRecordChecker";
+import LinkAnalyzer from "./pages/LinkAnalyzer";
 
 function App() {
   return (
@@ -16,6 +18,8 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/tools" element={<AllTools />} />
         <Route path="/domain-age-checker" element={<DomainAgeChecker />} />
+        <Route path="/dns-record-checker" element={<DNSRecordChecker />} />
+        <Route path="/link-analyzer" element={<LinkAnalyzer />} />
       </Routes>
       <Footer />
     </>
