@@ -36,8 +36,14 @@ const HeroSection = () => {
             <span className="text-indigo-600"> Powerful SEO Tools</span>
           </h1>
           <p className="max-w-sm mx-auto text-center text-base font-normal leading-7 text-gray-500 mb-9">
-            Invest intelligently and discover a better way to manage your entire
-            wealth easily.
+            <span className="text-green-600 font-bold px-2 bg-green-100 rounded-full animate-typing">
+              OptiSEO
+            </span>{" "}
+            offers free online{" "}
+            <span className="text-indigo-600 font-bold px-2 bg-indigo-100 rounded-full animate-bounceIn">
+              SEO
+            </span>{" "}
+            tools to optimize your website effortlessly.
           </p>
           <a
             href="/tools"
