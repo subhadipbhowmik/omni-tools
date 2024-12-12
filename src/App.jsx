@@ -10,6 +10,9 @@ import DNSRecordChecker from "./pages/DNSRecordChecker";
 import LinkAnalyzer from "./pages/LinkAnalyzer";
 import PageSizeChecker from "./pages/PageSizeChecker";
 import OpenGraphChecker from "./pages/OpenGraphChecker";
+import KeywordSuggestion from "./pages/KeywordSuggestion";
+import KeywordRankChecker from "./pages/KeywordRankChecker";
+import KeyWordDensityChecker from "./pages/KeyWordDensityChecker";
 
 function App() {
   return (
@@ -24,6 +27,15 @@ function App() {
         <Route path="/link-analyzer" element={<LinkAnalyzer />} />
         <Route path="/page-size-checker" element={<PageSizeChecker />} />
         <Route path="/open-graph-checker" element={<OpenGraphChecker />} />
+        <Route
+          path="/keyword-suggestion-tool"
+          element={<KeywordSuggestion />}
+        />
+        <Route path="/keyword-rank-checker" element={<KeywordRankChecker />} />
+        <Route
+          path="/keyword-density-checker"
+          element={<KeyWordDensityChecker />}
+        />
       </Routes>
       <Footer />
     </>

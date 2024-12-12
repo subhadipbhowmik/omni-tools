@@ -1,4 +1,5 @@
 import React from "react";
+import HeroImage from "../../assets/images/heroImage.png";
 
 const HeroSection = () => {
   return (
@@ -62,7 +63,7 @@ const HeroSection = () => {
           </a>
           <div className="flex justify-center">
             <img
-              src="https://pagedone.io/asset/uploads/1691054543.png"
+              src={HeroImage}
               alt="Dashboard image"
               className="rounded-t-3xl h-auto object-cover"
             />

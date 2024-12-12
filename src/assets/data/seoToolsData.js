@@ -3,6 +3,9 @@ import DNSRecord from "../../assets/images/dns-record.png";
 import LinkAnalyzer from "../../assets/images/link-analyzer.png";
 import PageSize from "../../assets/images/page-size-checker.png";
 import OpenGraph from "../../assets/images/open-graph.png";
+import KeywordSuggestion from "../../assets/images/keyword-suggestion.png";
+import KeywordRankCheck from "../../assets/images/keyword-rank-checker.png";
+import KeyWordDensity from "../../assets/images/keyword-density.png";
 
 export default [
   {
@@ -34,5 +37,23 @@ export default [
     icon: OpenGraph,
     title: "Open Graph Checker",
     pageLink: "/open-graph-checker",
+  },
+  {
+    id: 6,
+    icon: KeywordSuggestion,
+    title: "Keyword Suggestion",
+    pageLink: "/keyword-suggestion-tool",
+  },
+  {
+    id: 7,
+    icon: KeywordRankCheck,
+    title: "Keyword Rank Checker",
+    pageLink: "/keyword-rank-checker",
+  },
+  {
+    id: 8,
+    icon: KeyWordDensity,
+    title: "Keyword Density Checker",
+    pageLink: "/keyword-density-checker",
   },
 ];

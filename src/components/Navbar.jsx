@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { Menu, X } from "lucide-react";
+import { Menu, X, TrendingUp } from "lucide-react";
 
 const Navbar = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -14,22 +14,15 @@ const Navbar = () => {
             <Link to="/" className="flex-shrink-0 flex items-center">
               <div className="flex-shrink-0 flex items-center">
                 {/* Logo */}
-                <svg
-                  className="h-8 w-auto text-indigo-600"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
+                <a
+                  href="https://pagedone.io/"
+                  className="flex justify-center lg:justify-start"
                 >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M13 10V3L4 14h7v7l9-11h-7z"
-                  />
-                </svg>
-                <span className="ml-2 text-xl font-bold text-gray-900">
-                  SEO
-                </span>
+                  <TrendingUp className="w-8 h-8 text-indigo-600" />
+                  <span className="ml-2 text-xl font-bold text-indigo-600">
+                    OptiSEO
+                  </span>
+                </a>
               </div>
             </Link>
             <div className="hidden sm:ml-6 sm:flex sm:space-x-8">

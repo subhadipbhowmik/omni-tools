@@ -8,7 +8,8 @@ function Testimonial() {
       name: "Sarah Johnson",
       role: "Marketing Director",
       company: "TechCorp",
-      image: "https://shubhadipbhowmik.vercel.app/me.png",
+      image:
+        "https://www.surges.co/perch/resources/brian-dean-interview-exploding-topics-w500h500@1.5x.jpg",
       content:
         "This SEO tool has revolutionized our online presence. Our organic traffic has increased by 150% in just three months!",
       rating: 5,
@@ -26,7 +27,8 @@ function Testimonial() {
       name: "Emily Rodriguez",
       role: "Content Strategist",
       company: "BlogBoost",
-      image: "https://shubhadipbhowmik.vercel.app/me.png",
+      image:
+        "https://53.fs1.hubspotusercontent-na1.net/hub/53/hubfs/00-Blog-Related_Images/neil_patel_hs.jpg?width=500&height=500&name=neil_patel_hs.jpg",
       content:
         "The keyword research feature is a game-changer. It's helped us create content that truly resonates with our audience.",
       rating: 2,

@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { toast } from "react-hot-toast";
-import { Globe } from "lucide-react";
 
 export default function PageSizeChecker() {
   const [url, setUrl] = useState("");
@@ -67,7 +66,6 @@ export default function PageSizeChecker() {
     <div className="min-h-screen bg-gray-900 text-white py-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-3xl mx-auto">
         <header className="flex items-center justify-center mb-12">
-          <Globe className="w-8 h-8 mr-2" />
           <h1 className="text-4xl font-bold">Page Size Checker</h1>
         </header>
 

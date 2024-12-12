@@ -36,7 +36,6 @@ const LinkAnalyzer = () => {
     setLoading(true);
     setLinkData(null);
 
-    // Axios request options
     const options = {
       method: "GET",
       url: apiUrl,
@@ -62,85 +61,106 @@ const LinkAnalyzer = () => {
   };
 
   return (
-    <div className="container mx-auto px-4 py-12">
-      <h1 className="text-3xl font-bold text-center mb-8">Link Analyzer</h1>
+    <div className="min-h-screen bg-gray-900 text-white py-12 px-4 sm:px-6 lg:px-8">
+      <div className="max-w-3xl mx-auto">
+        <header className="flex items-center justify-center mb-12">
+          <h1 className="text-4xl font-bold">Link Analyzer</h1>
+        </header>
 
-      {/* URL Input Form */}
-      <form onSubmit={handleSubmit} className="max-w-md mx-auto space-y-4">
-        <div className="flex items-center border-b border-gray-300">
-          <input
-            type="text"
-            className="w-full py-2 px-4 rounded-lg text-gray-900 focus:outline-none"
-            placeholder="Enter URL (e.g., https://world.com)"
-            value={url}
-            onChange={(e) => setUrl(e.target.value)}
-          />
+        <div className="bg-gray-800 border border-gray-700 p-6 rounded-lg">
+          <h2 className="text-2xl font-semibold">Analyze Your Links</h2>
+          <p className="text-gray-400 mb-4">
+            Enter a URL to analyze its internal and external links.
+          </p>
+          <form onSubmit={handleSubmit} className="space-y-4">
+            <div className="flex items-center space-x-2">
+              <input
+                type="text"
+                className="flex-grow bg-gray-700 border border-gray-600 text-white p-2 rounded-lg"
+                placeholder="Enter URL (e.g., https://example.com)"
+                value={url}
+                onChange={(e) => setUrl(e.target.value)}
+              />
+              <button
+                type="submit"
+                disabled={loading}
+                className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg"
+              >
+                {loading ? "Loading..." : "Analyze"}
+              </button>
+            </div>
+          </form>
+
+          {linkData && (
+            <div className="mt-8 space-y-6">
+              <div className="bg-gray-800 border border-gray-700 p-6 rounded-lg">
+                <h3 className="text-xl font-semibold text-blue-400">
+                  Link Analysis
+                </h3>
+                <div className="mt-4 space-y-6">
+                  <p>
+                    <strong>Total Links:</strong> {linkData.total_links}
+                  </p>
+                  <p>
+                    <strong>Total Internal Links:</strong>{" "}
+                    {linkData.total_internal_links}
+                  </p>
+                  <p>
+                    <strong>Total External Links:</strong>{" "}
+                    {linkData.total_external_links}
+                  </p>
+                  <p>
+                    <strong>Total Internal Nofollow Links:</strong>{" "}
+                    {linkData.total_internal_nofollow}
+                  </p>
+                  <p>
+                    <strong>Total External Nofollow Links:</strong>{" "}
+                    {linkData.total_external_nofollow}
+                  </p>
+
+                  <h4 className="mt-6 text-lg font-semibold text-indigo-300">
+                    Internal Links
+                  </h4>
+                  <ul className="space-y-3">
+                    {linkData.internal_links.map((link, index) => (
+                      <li
+                        key={index}
+                        className="bg-gray-700 p-4 border border-gray-600 rounded-lg hover:bg-gray-600 transition duration-300"
+                      >
+                        <p>
+                          <strong>Link:</strong> {link.link}
+                        </p>
+                        <p>
+                          <strong>Follow Type:</strong> {link.follow_type}
+                        </p>
+                      </li>
+                    ))}
+                  </ul>
+
+                  <h4 className="mt-6 text-lg font-semibold text-indigo-300">
+                    External Links
+                  </h4>
+                  <ul className="space-y-3">
+                    {linkData.external_links.map((link, index) => (
+                      <li
+                        key={index}
+                        className="bg-gray-700 p-4 border border-gray-600 rounded-lg hover:bg-gray-600 transition duration-300"
+                      >
+                        <p>
+                          <strong>Link:</strong> {link.link}
+                        </p>
+                        <p>
+                          <strong>Follow Type:</strong> {link.follow_type}
+                        </p>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+            </div>
+          )}
         </div>
-
-        <button
-          type="submit"
-          className="w-full py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition duration-200"
-          disabled={loading}
-        >
-          {loading ? "Loading..." : "Analyze Links"}
-        </button>
-      </form>
-
-      {/* Display Link Data */}
-      {linkData && (
-        <div className="mt-8 bg-white p-6 rounded-lg shadow-lg max-w-md mx-auto text-center">
-          <h2 className="text-xl font-semibold text-gray-900">Link Analysis</h2>
-          <div className="mt-4 text-left">
-            <p>
-              <strong>Total Links:</strong> {linkData.total_links}
-            </p>
-            <p>
-              <strong>Total Internal Links:</strong>{" "}
-              {linkData.total_internal_links}
-            </p>
-            <p>
-              <strong>Total External Links:</strong>{" "}
-              {linkData.total_external_links}
-            </p>
-            <p>
-              <strong>Total Internal Nofollow Links:</strong>{" "}
-              {linkData.total_internal_nofollow}
-            </p>
-            <p>
-              <strong>Total External Nofollow Links:</strong>{" "}
-              {linkData.total_external_nofollow}
-            </p>
-
-            <h3 className="mt-6 text-lg font-semibold">Internal Links</h3>
-            <ul>
-              {linkData.internal_links.map((link, index) => (
-                <li key={index} className="mb-2">
-                  <p>
-                    <strong>Link:</strong> {link.link}
-                  </p>
-                  <p>
-                    <strong>Follow Type:</strong> {link.follow_type}
-                  </p>
-                </li>
-              ))}
-            </ul>
-
-            <h3 className="mt-6 text-lg font-semibold">External Links</h3>
-            <ul>
-              {linkData.external_links.map((link, index) => (
-                <li key={index} className="mb-2">
-                  <p>
-                    <strong>Link:</strong> {link.link}
-                  </p>
-                  <p>
-                    <strong>Follow Type:</strong> {link.follow_type}
-                  </p>
-                </li>
-              ))}
-            </ul>
-          </div>
-        </div>
-      )}
+      </div>
     </div>
   );
 };

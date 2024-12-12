@@ -1,10 +1,11 @@
 import React from "react";
 import seoToolsData from "../../assets/data/seoToolsData";
 import SeoToolsCard from "./SeoToolsCard";
+import "../../pages/AllTools.css";
 
 function SeoTools() {
   return (
-    <section className="bg-gray-50 py-16 px-6 sm:px-8">
+    <section className="bg-gray-50 py-16 px-6 sm:px-8 tools-container">
       <div className="container mx-auto text-center">
         <h2 className="text-3xl font-bold text-gray-900 mb-8">
           Explore Our Powerful SEO Tools
