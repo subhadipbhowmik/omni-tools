@@ -15,6 +15,7 @@ import KeywordRankChecker from "./pages/KeywordRankChecker";
 import KeyWordDensityChecker from "./pages/KeyWordDensityChecker";
 import AdsenseCalculator from "./pages/AdsenseCalculator";
 import DaPaChecker from "./pages/DaPaChecker";
+import PlagarismChecker from "./pages/writing/PlagarismChecker";
 
 function App() {
   return (
@@ -40,6 +41,9 @@ function App() {
         />
         <Route path="/adsense-calculator" element={<AdsenseCalculator />} />
         <Route path="/da-pa-checker" element={<DaPaChecker />} />
+
+        {/* writing tools route  */}
+        <Route path="/plagarism-checker" element={<PlagarismChecker />} />
       </Routes>
       <Footer />
     </>
