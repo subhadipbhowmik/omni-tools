@@ -5,9 +5,9 @@ import { Star } from "lucide-react";
 function Testimonial() {
   const testimonials = [
     {
-      name: "Sarah Johnson",
-      role: "Marketing Director",
-      company: "TechCorp",
+      name: "Brian Dean",
+      role: "CEO",
+      company: "Backlinko",
       image:
         "https://www.surges.co/perch/resources/brian-dean-interview-exploding-topics-w500h500@1.5x.jpg",
       content:
@@ -15,23 +15,23 @@ function Testimonial() {
       rating: 5,
     },
     {
-      name: "Michael Chen",
-      role: "E-commerce Owner",
-      company: "FashionFusion",
+      name: "Shubhadip Bhowmik",
+      role: "Intern",
+      company: "Next Drive India ",
       image: "https://shubhadipbhowmik.vercel.app/me.png",
       content:
         "I've tried many SEO tools, but this one stands out. It's intuitive, comprehensive, and the results speak for themselves.",
-      rating: 5,
+      rating: 4,
     },
     {
-      name: "Emily Rodriguez",
-      role: "Content Strategist",
-      company: "BlogBoost",
+      name: "Neil Patel",
+      role: "Digital Marketer",
+      company: " Crazy Egg",
       image:
         "https://53.fs1.hubspotusercontent-na1.net/hub/53/hubfs/00-Blog-Related_Images/neil_patel_hs.jpg?width=500&height=500&name=neil_patel_hs.jpg",
       content:
         "The keyword research feature is a game-changer. It's helped us create content that truly resonates with our audience.",
-      rating: 2,
+      rating: 5,
     },
   ];
   return (

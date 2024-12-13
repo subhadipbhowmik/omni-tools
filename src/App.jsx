@@ -13,6 +13,7 @@ import OpenGraphChecker from "./pages/OpenGraphChecker";
 import KeywordSuggestion from "./pages/KeywordSuggestion";
 import KeywordRankChecker from "./pages/KeywordRankChecker";
 import KeyWordDensityChecker from "./pages/KeyWordDensityChecker";
+import AdsenseCalculator from "./pages/AdsenseCalculator";
 
 function App() {
   return (
@@ -36,6 +37,7 @@ function App() {
           path="/keyword-density-checker"
           element={<KeyWordDensityChecker />}
         />
+        <Route path="/adsense-calculator" element={<AdsenseCalculator />} />
       </Routes>
       <Footer />
     </>

@@ -6,6 +6,7 @@ import OpenGraph from "../../assets/images/open-graph.png";
 import KeywordSuggestion from "../../assets/images/keyword-suggestion.png";
 import KeywordRankCheck from "../../assets/images/keyword-rank-checker.png";
 import KeyWordDensity from "../../assets/images/keyword-density.png";
+import AdsenseCalculator from "../../assets/images/adsense-calculator.png";
 
 export default [
   {
@@ -55,5 +56,11 @@ export default [
     icon: KeyWordDensity,
     title: "Keyword Density Checker",
     pageLink: "/keyword-density-checker",
+  },
+  {
+    id: 9,
+    icon: AdsenseCalculator,
+    title: "Adsense Calculator",
+    pageLink: "/adsense-calculator",
   },
 ];
