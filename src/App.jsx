@@ -14,6 +14,7 @@ import KeywordSuggestion from "./pages/KeywordSuggestion";
 import KeywordRankChecker from "./pages/KeywordRankChecker";
 import KeyWordDensityChecker from "./pages/KeyWordDensityChecker";
 import AdsenseCalculator from "./pages/AdsenseCalculator";
+import DaPaChecker from "./pages/DaPaChecker";
 
 function App() {
   return (
@@ -38,6 +39,7 @@ function App() {
           element={<KeyWordDensityChecker />}
         />
         <Route path="/adsense-calculator" element={<AdsenseCalculator />} />
+        <Route path="/da-pa-checker" element={<DaPaChecker />} />
       </Routes>
       <Footer />
     </>

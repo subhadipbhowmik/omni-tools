@@ -7,6 +7,7 @@ import KeywordSuggestion from "../../assets/images/keyword-suggestion.png";
 import KeywordRankCheck from "../../assets/images/keyword-rank-checker.png";
 import KeyWordDensity from "../../assets/images/keyword-density.png";
 import AdsenseCalculator from "../../assets/images/adsense-calculator.png";
+import DAPAChecker from "../../assets/images/domain-authority-checker.png";
 
 export default [
   {
@@ -62,5 +63,11 @@ export default [
     icon: AdsenseCalculator,
     title: "Adsense Calculator",
     pageLink: "/adsense-calculator",
+  },
+  {
+    id: 10,
+    icon: DAPAChecker,
+    title: "DA/PA Checker",
+    pageLink: "/da-pa-checker",
   },
 ];
