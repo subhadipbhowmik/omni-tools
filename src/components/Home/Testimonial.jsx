@@ -37,7 +37,7 @@ function Testimonial() {
   return (
     <>
       <section className="py-8 sm:py-16">
-        <div className="mx-auto max-w-7xl px-2 sm:px-4 lg:px-6">
+        <div className="mx-auto max-w-7xl px-6 sm:px-4 lg:px-8">
           <div className="mx-auto max-w-xl text-center">
             <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
               Trusted by Industry Leaders
