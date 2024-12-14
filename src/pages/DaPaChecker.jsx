@@ -49,7 +49,52 @@ const DaPaChecker = () => {
     <>
       <Helmet>
         <title>DA/PA Checker | OptiSEO</title>
+        <meta
+          name="description"
+          content="Check the Domain Authority (DA) and Page Authority (PA) of any website with OptiSEO's DA/PA Checker. Analyze your site's SEO strength and improve rankings."
+        />
+        <link rel="canonical" href="https://optiseo.vercel.app/da-pa-checker" />
+        <meta
+          name="keywords"
+          content="DA PA checker, domain authority, page authority, SEO tools, website analysis, SEO strength"
+        />
+        <meta name="robots" content="index, follow" />
+        <meta name="author" content="Shubhadip Bhowmik" />
+
+        {/* Open Graph Metadata */}
+        <meta property="og:title" content="DA/PA Checker | OptiSEO" />
+        <meta
+          property="og:description"
+          content="Check the Domain Authority and Page Authority of any website with OptiSEO's DA/PA Checker. Improve your SEO strategy by understanding your site's authority."
+        />
+        <meta
+          property="og:image"
+          content="https://res.cloudinary.com/shubhadipbhowmik/image/upload/v1734183277/optiseo/metadata/optiseo.png"
+        />
+        <meta property="og:type" content="website" />
+        <meta
+          property="og:url"
+          content="https://optiseo.vercel.app/da-pa-checker"
+        />
+        <meta property="og:locale" content="en_IN" />
+
+        {/* Twitter Metadata */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="DA/PA Checker | OptiSEO" />
+        <meta
+          name="twitter:description"
+          content="Analyze the Domain Authority (DA) and Page Authority (PA) of any website with OptiSEO's DA/PA Checker to improve your SEO performance."
+        />
+        <meta
+          name="twitter:image"
+          content="https://res.cloudinary.com/shubhadipbhowmik/image/upload/v1734183277/optiseo/metadata/optiseo.png"
+        />
+        <meta name="twitter:site" content="https://x.com/myselfshubhadip" />
+
+        {/* Favicon */}
+        <link rel="icon" href="https://optiseo.vercel.app/favicon.ico" />
       </Helmet>
+
       <div className="min-h-screen bg-gray-900 text-white py-12 px-4 sm:px-6 lg:px-8">
         <div className="max-w-3xl mx-auto">
           <header className="flex items-center justify-center mb-12">

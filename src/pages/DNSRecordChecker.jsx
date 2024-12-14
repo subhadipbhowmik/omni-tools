@@ -73,7 +73,55 @@ function DNSRecordChecker() {
     <>
       <Helmet>
         <title>DNS Record Checker | OptiSEO</title>
+        <meta
+          name="description"
+          content="Check DNS records for any domain using OptiSEO's DNS Record Checker tool. Verify your DNS settings and ensure your domain is correctly configured."
+        />
+        <link
+          rel="canonical"
+          href="https://optiseo.vercel.app/dns-record-checker"
+        />
+        <meta
+          name="keywords"
+          content="DNS record checker, SEO tools, domain DNS, DNS settings, domain configuration, website analysis"
+        />
+        <meta name="robots" content="index, follow" />
+        <meta name="author" content="OptiSEO Team" />
+
+        {/* Open Graph Metadata */}
+        <meta property="og:title" content="DNS Record Checker | OptiSEO" />
+        <meta
+          property="og:description"
+          content="Verify DNS records and ensure proper domain configuration with OptiSEO's DNS Record Checker tool. Improve your site's performance with accurate DNS settings."
+        />
+        <meta
+          property="og:image"
+          content="https://res.cloudinary.com/shubhadipbhowmik/image/upload/v1734183277/optiseo/metadata/optiseo.png"
+        />
+        <meta property="og:type" content="website" />
+        <meta
+          property="og:url"
+          content="https://optiseo.vercel.app/dns-record-checker"
+        />
+        <meta property="og:locale" content="en_IN" />
+
+        {/* Twitter Metadata */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="DNS Record Checker | OptiSEO" />
+        <meta
+          name="twitter:description"
+          content="Check and verify DNS records for any domain with OptiSEO's DNS Record Checker tool. Ensure correct DNS configuration for better website performance."
+        />
+        <meta
+          name="twitter:image"
+          content="https://res.cloudinary.com/shubhadipbhowmik/image/upload/v1734183277/optiseo/metadata/optiseo.png"
+        />
+        <meta name="twitter:site" content="@YourTwitterHandle" />
+
+        {/* Favicon */}
+        <link rel="icon" href="https://optiseo.vercel.app/favicon.ico" />
       </Helmet>
+
       <div className="min-h-screen bg-gray-900 text-white py-12 px-4 sm:px-6 lg:px-8">
         <div className="max-w-3xl mx-auto">
           <header className="flex items-center justify-center mb-12">

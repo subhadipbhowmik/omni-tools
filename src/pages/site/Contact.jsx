@@ -8,7 +8,49 @@ function Contact() {
     <>
       <Helmet>
         <title>Contact Us | OptiSEO</title>
+        <meta
+          name="description"
+          content="Get in touch with OptiSEO to learn more about our comprehensive SEO tools, services, and support for optimizing your website's performance."
+        />
+        <link rel="canonical" href="https://optiseo.vercel.app/contact" />
+        <meta
+          name="keywords"
+          content="contact OptiSEO, SEO tools support, website optimization help, improve site ranking"
+        />
+        <meta name="robots" content="index, follow" />
+        <meta name="author" content="OptiSEO Team" />
+
+        {/* <!-- Open Graph Metadata --> */}
+        <meta property="og:title" content="Contact Us | OptiSEO" />
+        <meta
+          property="og:description"
+          content="Reach out to the OptiSEO team for expert advice on using our SEO tools to boost your website's ranking and performance."
+        />
+        <meta
+          property="og:image"
+          content="https://res.cloudinary.com/shubhadipbhowmik/image/upload/v1734183277/optiseo/metadata/optiseo.png"
+        />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://optiseo.vercel.app/contact" />
+        <meta property="og:locale" content="en_US" />
+
+        {/* <!-- Twitter Metadata --> */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Contact Us | OptiSEO" />
+        <meta
+          name="twitter:description"
+          content="Need help with SEO? Contact OptiSEO to explore our all-in-one SEO solutions and expert support for your website."
+        />
+        <meta
+          name="twitter:image"
+          content="https://res.cloudinary.com/shubhadipbhowmik/image/upload/v1734183277/optiseo/metadata/optiseo.png"
+        />
+        <meta name="twitter:site" content="@YourTwitterHandle" />
+
+        {/*  Favicon  */}
+        <link rel="icon" href="https://optiseo.vercel.app/favicon.ico" />
       </Helmet>
+
       <section className="py-6">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 grid-cols-1 gap-x-24">

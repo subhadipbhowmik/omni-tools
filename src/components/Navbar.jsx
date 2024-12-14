@@ -12,9 +12,12 @@ const Navbar = () => {
         <div className="flex justify-between items-center h-16">
           {/* Logo Section */}
           <div className="flex items-center">
-            <Link to="/" className="flex-shrink-0 flex items-center">
+            <Link
+              to="https://optiseo.vercel.app/"
+              className="flex-shrink-0 flex items-center"
+            >
               <a
-                href="https://pagedone.io/"
+                href="https://optiseo.vercel.app/"
                 className="flex items-center justify-center lg:justify-start"
               >
                 <TrendingUp className="w-8 h-8 text-indigo-600" />

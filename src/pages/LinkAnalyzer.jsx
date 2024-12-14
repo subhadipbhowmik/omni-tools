@@ -65,7 +65,52 @@ const LinkAnalyzer = () => {
     <>
       <Helmet>
         <title>Link Analyzer | OptiSEO</title>
+        <meta
+          name="description"
+          content="Analyze the internal and external links of any URL with OptiSEO's Link Analyzer. Check your website's link structure and improve SEO performance."
+        />
+        <link rel="canonical" href="https://optiseo.vercel.app/link-analyzer" />
+        <meta
+          name="keywords"
+          content="link analyzer, SEO tools, internal links, external links, link structure, website analysis"
+        />
+        <meta name="robots" content="index, follow" />
+        <meta name="author" content="OptiSEO Team" />
+
+        {/* Open Graph Metadata */}
+        <meta property="og:title" content="Link Analyzer | OptiSEO" />
+        <meta
+          property="og:description"
+          content="Analyze internal and external links of any URL with OptiSEO's Link Analyzer. Improve your website's SEO by ensuring a proper link structure."
+        />
+        <meta
+          property="og:image"
+          content="https://res.cloudinary.com/shubhadipbhowmik/image/upload/v1734183277/optiseo/metadata/optiseo.png"
+        />
+        <meta property="og:type" content="website" />
+        <meta
+          property="og:url"
+          content="https://optiseo.vercel.app/link-analyzer"
+        />
+        <meta property="og:locale" content="en_IN" />
+
+        {/* Twitter Metadata */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Link Analyzer | OptiSEO" />
+        <meta
+          name="twitter:description"
+          content="Analyze internal and external links of any URL to improve your website's SEO with OptiSEO's Link Analyzer tool."
+        />
+        <meta
+          name="twitter:image"
+          content="https://res.cloudinary.com/shubhadipbhowmik/image/upload/v1734183277/optiseo/metadata/optiseo.png"
+        />
+        <meta name="twitter:site" content="@YourTwitterHandle" />
+
+        {/* Favicon */}
+        <link rel="icon" href="https://optiseo.vercel.app/favicon.ico" />
       </Helmet>
+
       <div className="min-h-screen bg-gray-900 text-white py-12 px-4 sm:px-6 lg:px-8">
         <div className="max-w-3xl mx-auto">
           <header className="flex items-center justify-center mb-12">

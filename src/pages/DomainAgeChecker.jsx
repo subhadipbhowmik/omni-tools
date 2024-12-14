@@ -67,7 +67,55 @@ function DomainAgeChecker() {
     <>
       <Helmet>
         <title>Domain Age Checker | OptiSEO</title>
+        <meta
+          name="description"
+          content="Check the age of any domain with OptiSEO's Domain Age Checker tool. Discover how long a domain has been active and its potential impact on SEO."
+        />
+        <link
+          rel="canonical"
+          href="https://optiseo.vercel.app/domain-age-checker"
+        />
+        <meta
+          name="keywords"
+          content="domain age checker, SEO tools, website age, domain analysis, SEO ranking, domain authority"
+        />
+        <meta name="robots" content="index, follow" />
+        <meta name="author" content="OptiSEO Team" />
+
+        {/* Open Graph Metadata */}
+        <meta property="og:title" content="Domain Age Checker | OptiSEO" />
+        <meta
+          property="og:description"
+          content="Discover the age of any domain using OptiSEO's Domain Age Checker. Understand how domain age affects SEO and website performance."
+        />
+        <meta
+          property="og:image"
+          content="https://res.cloudinary.com/shubhadipbhowmik/image/upload/v1734183277/optiseo/metadata/optiseo.png"
+        />
+        <meta property="og:type" content="website" />
+        <meta
+          property="og:url"
+          content="https://optiseo.vercel.app/domain-age-checker"
+        />
+        <meta property="og:locale" content="en_IN" />
+
+        {/* Twitter Metadata */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Domain Age Checker | OptiSEO" />
+        <meta
+          name="twitter:description"
+          content="Check the age of any domain with OptiSEO's Domain Age Checker tool and understand its SEO potential."
+        />
+        <meta
+          name="twitter:image"
+          content="https://res.cloudinary.com/shubhadipbhowmik/image/upload/v1734183277/optiseo/metadata/optiseo.png"
+        />
+        <meta name="twitter:site" content="@YourTwitterHandle" />
+
+        {/* Favicon */}
+        <link rel="icon" href="https://optiseo.vercel.app/favicon.ico" />
       </Helmet>
+
       <div className="min-h-screen bg-gray-900 text-white py-12 px-4 sm:px-6 lg:px-8">
         <div className="max-w-3xl mx-auto">
           <header className="flex items-center justify-center mb-12">
