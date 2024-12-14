@@ -16,6 +16,11 @@ import KeyWordDensityChecker from "./pages/KeyWordDensityChecker";
 import AdsenseCalculator from "./pages/AdsenseCalculator";
 import DaPaChecker from "./pages/DaPaChecker";
 import PlagarismChecker from "./pages/writing/PlagarismChecker";
+import About from "./pages/site/About";
+import Contact from "./pages/site/Contact";
+import OnlineTextEditor from "./pages/writing/OnlineTextEditor";
+import ChatWithGemini from "./components/UI/ChatWithGemini";
+import GrammarChecker from "./pages/writing/GrammarChecker";
 
 function App() {
   return (
@@ -23,6 +28,10 @@ function App() {
       <Toaster position="bottom-center" reverseOrder={false} />
       <Navbar />
       <Routes>
+        {/* pages  */}
+        <Route path="/about" element={<About />} />
+        <Route path="/contact" element={<Contact />} />
+
         <Route path="/" element={<Home />} />
         <Route path="/tools" element={<AllTools />} />
         <Route path="/domain-age-checker" element={<DomainAgeChecker />} />
@@ -44,6 +53,9 @@ function App() {
 
         {/* writing tools route  */}
         <Route path="/plagarism-checker" element={<PlagarismChecker />} />
+        <Route path="/online-text-editor" element={<OnlineTextEditor />} />
+        <Route path="/chat" element={<ChatWithGemini />} />
+        <Route path="/grammar-checker" element={<GrammarChecker />} />
       </Routes>
       <Footer />
     </>
