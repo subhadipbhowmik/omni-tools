@@ -19,7 +19,6 @@ import PlagarismChecker from "./pages/writing/PlagarismChecker";
 import About from "./pages/site/About";
 import Contact from "./pages/site/Contact";
 import OnlineTextEditor from "./pages/writing/OnlineTextEditor";
-import ChatWithGemini from "./components/UI/ChatWithGemini";
 import GrammarChecker from "./pages/writing/GrammarChecker";
 
 function App() {
@@ -54,7 +53,6 @@ function App() {
         {/* writing tools route  */}
         <Route path="/plagarism-checker" element={<PlagarismChecker />} />
         <Route path="/online-text-editor" element={<OnlineTextEditor />} />
-        <Route path="/chat" element={<ChatWithGemini />} />
         <Route path="/grammar-checker" element={<GrammarChecker />} />
       </Routes>
       <Footer />
