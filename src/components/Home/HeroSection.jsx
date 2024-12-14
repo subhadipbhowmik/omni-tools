@@ -6,9 +6,9 @@ const HeroSection = () => {
     <>
       <section className="pt-8 lg:pt-32 bg-[url('https://pagedone.io/asset/uploads/1691055810.png')] bg-center bg-cover">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative text-center">
-          <div className="border border-indigo-600 p-1 w-60 mx-auto rounded-full flex items-center justify-between mb-4">
+          <div className="border border-indigo-600 p-1 w-60 mx-auto rounded-full flex items-center justify-between gap-2 mb-4">
             <span className="font-inter text-xs font-medium text-gray-900 ml-3">
-              Unlock SEO Power for Your Brand
+              Unlock the power of SEO Tools
             </span>
             <a
               href="/tools"

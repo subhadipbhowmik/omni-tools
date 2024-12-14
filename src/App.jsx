@@ -1,5 +1,5 @@
-import React from "react";
-import { Routes, Route } from "react-router-dom";
+import React, { useState, useEffect } from "react";
+import { Routes, Route, useLocation } from "react-router-dom";
 import Home from "./pages/Home";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
@@ -20,17 +20,30 @@ import About from "./pages/site/About";
 import Contact from "./pages/site/Contact";
 import OnlineTextEditor from "./pages/writing/OnlineTextEditor";
 import GrammarChecker from "./pages/writing/GrammarChecker";
+import Loader from "./components/UI/Loader";
 
 function App() {
+  const location = useLocation();
+  const [loading, setLoading] = useState(false);
+
+  // Trigger loader on route change
+  useEffect(() => {
+    setLoading(true);
+    const timeout = setTimeout(() => {
+      setLoading(false);
+    }, 800); // Set the loader timeout duration (adjust as needed)
+
+    return () => clearTimeout(timeout); // Cleanup timeout
+  }, [location]);
+
   return (
     <>
       <Toaster position="bottom-center" reverseOrder={false} />
       <Navbar />
+      {loading && <Loader />} {/* Show the loader while loading */}
       <Routes>
-        {/* pages  */}
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
-
         <Route path="/" element={<Home />} />
         <Route path="/tools" element={<AllTools />} />
         <Route path="/domain-age-checker" element={<DomainAgeChecker />} />
@@ -49,8 +62,6 @@ function App() {
         />
         <Route path="/adsense-calculator" element={<AdsenseCalculator />} />
         <Route path="/da-pa-checker" element={<DaPaChecker />} />
-
-        {/* writing tools route  */}
         <Route path="/plagarism-checker" element={<PlagarismChecker />} />
         <Route path="/online-text-editor" element={<OnlineTextEditor />} />
         <Route path="/grammar-checker" element={<GrammarChecker />} />
