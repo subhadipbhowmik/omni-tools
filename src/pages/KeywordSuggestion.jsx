@@ -97,22 +97,21 @@ const KeywordSuggestion = () => {
             Enter a query to get keyword suggestions.
           </p>
           <form onSubmit={handleSubmit} className="space-y-4">
-            <div className="flex items-center space-x-2">
-              <input
-                type="text"
-                className="flex-grow bg-gray-700 border border-gray-600 text-white p-2 rounded-lg"
-                placeholder="Enter query (e.g., best programming language 2024)"
-                value={query}
-                onChange={(e) => setQuery(e.target.value)}
-              />
-              <button
-                type="submit"
-                disabled={loading}
-                className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg"
-              >
-                {loading ? "Loading..." : "Keywords"}
-              </button>
-            </div>
+            {/* Input and Button on separate lines */}
+            <input
+              type="text"
+              className="w-full bg-gray-700 border border-gray-600 text-white p-2 rounded-lg"
+              placeholder="Enter query (e.g., best programming language 2024)"
+              value={query}
+              onChange={(e) => setQuery(e.target.value)}
+            />
+            <button
+              type="submit"
+              disabled={loading}
+              className="w-full bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg"
+            >
+              {loading ? "Loading..." : "Keywords"}
+            </button>
           </form>
 
           {keywords.length > 0 ? (

@@ -65,31 +65,32 @@ const KeywordRankChecker = () => {
             Enter a URL and a keyword to check its rank.
           </p>
           <form onSubmit={handleSubmit} className="space-y-4">
-            <div className="flex items-center space-x-2">
-              <input
-                type="text"
-                className="flex-grow bg-gray-700 border border-gray-600 text-white p-2 rounded-lg"
-                placeholder="Enter URL (e.g., codingport.in)"
-                value={url}
-                onChange={(e) => setUrl(e.target.value)}
-              />
-            </div>
-            <div className="flex items-center space-x-2">
-              <input
-                type="text"
-                className="flex-grow bg-gray-700 border border-gray-600 text-white p-2 rounded-lg"
-                placeholder="Enter keyword (e.g., codingport)"
-                value={keyword}
-                onChange={(e) => setKeyword(e.target.value)}
-              />
-              <button
-                type="submit"
-                disabled={loading}
-                className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg"
-              >
-                {loading ? "Loading..." : "Check Rank"}
-              </button>
-            </div>
+            {/* Input for URL */}
+            <input
+              type="text"
+              className="w-full bg-gray-700 border border-gray-600 text-white p-2 rounded-lg"
+              placeholder="Enter URL (e.g., codingport.in)"
+              value={url}
+              onChange={(e) => setUrl(e.target.value)}
+            />
+
+            {/* Input for Keyword */}
+            <input
+              type="text"
+              className="w-full bg-gray-700 border border-gray-600 text-white p-2 rounded-lg"
+              placeholder="Enter keyword (e.g., codingport)"
+              value={keyword}
+              onChange={(e) => setKeyword(e.target.value)}
+            />
+
+            {/* Submit Button */}
+            <button
+              type="submit"
+              disabled={loading}
+              className="w-full bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg"
+            >
+              {loading ? "Loading..." : "Check Rank"}
+            </button>
           </form>
 
           {rankData && (

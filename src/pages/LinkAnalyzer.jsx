@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import { toast } from "react-hot-toast";
+import { Helmet } from "react-helmet-async";
 
 const LinkAnalyzer = () => {
   const [url, setUrl] = useState("");
@@ -61,107 +62,118 @@ const LinkAnalyzer = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gray-900 text-white py-12 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-3xl mx-auto">
-        <header className="flex items-center justify-center mb-12">
-          <h1 className="text-4xl font-bold">Link Analyzer</h1>
-        </header>
+    <>
+      <Helmet>
+        <title>Link Analyzer | OptiSEO</title>
+      </Helmet>
+      <div className="min-h-screen bg-gray-900 text-white py-12 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-3xl mx-auto">
+          <header className="flex items-center justify-center mb-12">
+            <h1 className="text-4xl font-bold">Link Analyzer</h1>
+          </header>
 
-        <div className="bg-gray-800 border border-gray-700 p-6 rounded-lg">
-          <h2 className="text-2xl font-semibold">Analyze Your Links</h2>
-          <p className="text-gray-400 mb-4">
-            Enter a URL to analyze its internal and external links.
-          </p>
-          <form onSubmit={handleSubmit} className="space-y-4">
-            <div className="flex items-center space-x-2">
-              <input
-                type="text"
-                className="flex-grow bg-gray-700 border border-gray-600 text-white p-2 rounded-lg"
-                placeholder="Enter URL (e.g., https://example.com)"
-                value={url}
-                onChange={(e) => setUrl(e.target.value)}
-              />
+          <div className="bg-gray-800 border border-gray-700 p-6 rounded-lg">
+            <h2 className="text-2xl font-semibold">Analyze Your Links</h2>
+            <p className="text-gray-400 mb-4">
+              Enter a URL to analyze its internal and external links.
+            </p>
+            <form onSubmit={handleSubmit} className="space-y-4">
+              {/* Input field */}
+              <div className="space-y-2">
+                <label className="block text-sm font-medium text-gray-400">
+                  Target URL
+                </label>
+                <input
+                  type="text"
+                  className="w-full bg-gray-700 border border-gray-600 text-white p-2 rounded-lg"
+                  placeholder="Enter URL (e.g., https://example.com)"
+                  value={url}
+                  onChange={(e) => setUrl(e.target.value)}
+                />
+              </div>
+
+              {/* Submit button */}
               <button
                 type="submit"
                 disabled={loading}
-                className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg"
+                className="w-full bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg"
               >
                 {loading ? "Loading..." : "Analyze"}
               </button>
-            </div>
-          </form>
+            </form>
 
-          {linkData && (
-            <div className="mt-8 space-y-6">
-              <div className="bg-gray-800 border border-gray-700 p-6 rounded-lg">
-                <h3 className="text-xl font-semibold text-blue-400">
-                  Link Analysis
-                </h3>
-                <div className="mt-4 space-y-6">
-                  <p>
-                    <strong>Total Links:</strong> {linkData.total_links}
-                  </p>
-                  <p>
-                    <strong>Total Internal Links:</strong>{" "}
-                    {linkData.total_internal_links}
-                  </p>
-                  <p>
-                    <strong>Total External Links:</strong>{" "}
-                    {linkData.total_external_links}
-                  </p>
-                  <p>
-                    <strong>Total Internal Nofollow Links:</strong>{" "}
-                    {linkData.total_internal_nofollow}
-                  </p>
-                  <p>
-                    <strong>Total External Nofollow Links:</strong>{" "}
-                    {linkData.total_external_nofollow}
-                  </p>
+            {linkData && (
+              <div className="mt-8 space-y-6">
+                <div className="bg-gray-800 border border-gray-700 p-6 rounded-lg">
+                  <h3 className="text-xl font-semibold text-blue-400">
+                    Link Analysis
+                  </h3>
+                  <div className="mt-4 space-y-6">
+                    <p>
+                      <strong>Total Links:</strong> {linkData.total_links}
+                    </p>
+                    <p>
+                      <strong>Total Internal Links:</strong>{" "}
+                      {linkData.total_internal_links}
+                    </p>
+                    <p>
+                      <strong>Total External Links:</strong>{" "}
+                      {linkData.total_external_links}
+                    </p>
+                    <p>
+                      <strong>Total Internal Nofollow Links:</strong>{" "}
+                      {linkData.total_internal_nofollow}
+                    </p>
+                    <p>
+                      <strong>Total External Nofollow Links:</strong>{" "}
+                      {linkData.total_external_nofollow}
+                    </p>
 
-                  <h4 className="mt-6 text-lg font-semibold text-indigo-300">
-                    Internal Links
-                  </h4>
-                  <ul className="space-y-3">
-                    {linkData.internal_links.map((link, index) => (
-                      <li
-                        key={index}
-                        className="bg-gray-700 p-4 border border-gray-600 rounded-lg hover:bg-gray-600 transition duration-300"
-                      >
-                        <p>
-                          <strong>Link:</strong> {link.link}
-                        </p>
-                        <p>
-                          <strong>Follow Type:</strong> {link.follow_type}
-                        </p>
-                      </li>
-                    ))}
-                  </ul>
+                    <h4 className="mt-6 text-lg font-semibold text-indigo-300">
+                      Internal Links
+                    </h4>
+                    <ul className="space-y-3">
+                      {linkData.internal_links.map((link, index) => (
+                        <li
+                          key={index}
+                          className="bg-gray-700 p-4 border border-gray-600 rounded-lg hover:bg-gray-600 transition duration-300"
+                        >
+                          <p>
+                            <strong>Link:</strong> {link.link}
+                          </p>
+                          <p>
+                            <strong>Follow Type:</strong> {link.follow_type}
+                          </p>
+                        </li>
+                      ))}
+                    </ul>
 
-                  <h4 className="mt-6 text-lg font-semibold text-indigo-300">
-                    External Links
-                  </h4>
-                  <ul className="space-y-3">
-                    {linkData.external_links.map((link, index) => (
-                      <li
-                        key={index}
-                        className="bg-gray-700 p-4 border border-gray-600 rounded-lg hover:bg-gray-600 transition duration-300"
-                      >
-                        <p>
-                          <strong>Link:</strong> {link.link}
-                        </p>
-                        <p>
-                          <strong>Follow Type:</strong> {link.follow_type}
-                        </p>
-                      </li>
-                    ))}
-                  </ul>
+                    <h4 className="mt-6 text-lg font-semibold text-indigo-300">
+                      External Links
+                    </h4>
+                    <ul className="space-y-3">
+                      {linkData.external_links.map((link, index) => (
+                        <li
+                          key={index}
+                          className="bg-gray-700 p-4 border border-gray-600 rounded-lg hover:bg-gray-600 transition duration-300"
+                        >
+                          <p>
+                            <strong>Link:</strong> {link.link}
+                          </p>
+                          <p>
+                            <strong>Follow Type:</strong> {link.follow_type}
+                          </p>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
                 </div>
               </div>
-            </div>
-          )}
+            )}
+          </div>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 

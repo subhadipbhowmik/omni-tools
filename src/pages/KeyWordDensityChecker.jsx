@@ -97,22 +97,23 @@ const KeyWordDensityChecker = () => {
             }}
             className="space-y-4"
           >
-            <div className="flex items-center space-x-2">
-              <input
-                type="text"
-                value={url}
-                onChange={(e) => setUrl(e.target.value)}
-                className="flex-grow bg-gray-700 border border-gray-600 text-white p-2 rounded-lg"
-                placeholder="Enter URL (e.g., https://google.com)"
-              />
-              <button
-                type="submit"
-                disabled={loading}
-                className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg"
-              >
-                {loading ? "Loading..." : "Check Density"}
-              </button>
-            </div>
+            {/* Input for URL */}
+            <input
+              type="text"
+              value={url}
+              onChange={(e) => setUrl(e.target.value)}
+              className="w-full bg-gray-700 border border-gray-600 text-white p-2 rounded-lg"
+              placeholder="Enter URL (e.g., https://google.com)"
+            />
+
+            {/* Submit Button */}
+            <button
+              type="submit"
+              disabled={loading}
+              className="w-full bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg"
+            >
+              {loading ? "Loading..." : "Check Density"}
+            </button>
           </form>
 
           {keywordData.length > 0 ? (

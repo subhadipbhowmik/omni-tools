@@ -74,22 +74,21 @@ export default function OpenGraphChecker() {
             Enter a URL to analyze its Open Graph data and improve SEO
           </p>
           <form onSubmit={handleSubmit} className="space-y-4">
-            <div className="flex items-center space-x-2">
-              <input
-                type="text"
-                className="flex-grow bg-gray-700 border border-gray-600 text-white p-2 rounded-lg"
-                placeholder="Enter URL (e.g., https://google.com)"
-                value={url}
-                onChange={(e) => setUrl(e.target.value)}
-              />
-              <button
-                type="submit"
-                disabled={loading}
-                className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg"
-              >
-                {loading ? "Loading..." : "Check"}
-              </button>
-            </div>
+            {/* Input and Button on separate lines */}
+            <input
+              type="text"
+              className="w-full bg-gray-700 border border-gray-600 text-white p-2 rounded-lg"
+              placeholder="Enter URL (e.g., https://google.com)"
+              value={url}
+              onChange={(e) => setUrl(e.target.value)}
+            />
+            <button
+              type="submit"
+              disabled={loading}
+              className="w-full bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg"
+            >
+              {loading ? "Loading..." : "Check"}
+            </button>
           </form>
 
           {openGraphData && (

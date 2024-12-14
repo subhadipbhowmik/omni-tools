@@ -75,22 +75,21 @@ export default function PageSizeChecker() {
             Enter a URL to analyze its page size and performance
           </p>
           <form onSubmit={handleSubmit} className="space-y-4">
-            <div className="flex items-center space-x-2">
-              <input
-                type="text"
-                className="flex-grow bg-gray-700 border border-gray-600 text-white p-2 rounded-lg"
-                placeholder="Enter URL (e.g., https://google.com)"
-                value={url}
-                onChange={(e) => setUrl(e.target.value)}
-              />
-              <button
-                type="submit"
-                disabled={loading}
-                className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg"
-              >
-                {loading ? "Loading..." : "Check"}
-              </button>
-            </div>
+            {/* Input and Button in separate lines */}
+            <input
+              type="text"
+              className="w-full bg-gray-700 border border-gray-600 text-white p-2 rounded-lg"
+              placeholder="Enter URL (e.g., https://google.com)"
+              value={url}
+              onChange={(e) => setUrl(e.target.value)}
+            />
+            <button
+              type="submit"
+              disabled={loading}
+              className="w-full bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg"
+            >
+              {loading ? "Loading..." : "Check"}
+            </button>
           </form>
 
           {pageSize && (
@@ -102,17 +101,6 @@ export default function PageSizeChecker() {
             >
               <div className="space-y-2">
                 <h3 className="text-lg font-semibold">Page Size Details</h3>
-                {/* <p>
-                  <span className="font-medium">Link:</span>{" "}
-                  <a
-                    href={pageSize.link}
-                    className="text-blue-400 hover:underline"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    {pageSize.link}
-                  </a>
-                </p> */}
                 <p>
                   <span className="font-medium">Size:</span> {pageSize.bytes}{" "}
                   bytes ({pageSize.kb} KB)
