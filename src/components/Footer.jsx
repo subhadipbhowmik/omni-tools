@@ -111,6 +111,22 @@ const Footer = () => {
                     Plagarism Checker
                   </a>
                 </li>
+                <li className="mb-6">
+                  <a
+                    href="/grammar-checker"
+                    className="text-gray-600 hover:text-gray-900"
+                  >
+                    Grammer Checker
+                  </a>
+                </li>
+                <li className="mb-6">
+                  <a
+                    href="/letter-writing-generator"
+                    className="text-gray-600 hover:text-gray-900"
+                  >
+                    Letter Writing
+                  </a>
+                </li>
               </ul>
             </div>
             {/*End Col*/}

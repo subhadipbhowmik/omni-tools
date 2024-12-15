@@ -21,6 +21,7 @@ import Contact from "./pages/site/Contact";
 import OnlineTextEditor from "./pages/writing/OnlineTextEditor";
 import GrammarChecker from "./pages/writing/GrammarChecker";
 import Loader from "./components/UI/Loader";
+import LetterWriting from "./pages/writing/LetterWriting";
 
 function App() {
   const location = useLocation();
@@ -62,9 +63,12 @@ function App() {
         />
         <Route path="/adsense-calculator" element={<AdsenseCalculator />} />
         <Route path="/da-pa-checker" element={<DaPaChecker />} />
+
+        {/* writing tools  */}
         <Route path="/plagarism-checker" element={<PlagarismChecker />} />
         <Route path="/online-text-editor" element={<OnlineTextEditor />} />
         <Route path="/grammar-checker" element={<GrammarChecker />} />
+        <Route path="/letter-writing-generator" element={<LetterWriting />} />
       </Routes>
       <Footer />
     </>
