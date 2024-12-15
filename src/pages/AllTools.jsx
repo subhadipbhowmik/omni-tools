@@ -1,6 +1,7 @@
 import React from "react";
 import SeoTools from "../components/Tools/SeoTools";
 import WritingTools from "../components/Tools/WritingTools";
+import TrainTools from "../components/Tools/TrainTools";
 import { Helmet } from "react-helmet-async";
 
 function AllTools() {
@@ -53,6 +54,7 @@ function AllTools() {
 
       <SeoTools />
       <WritingTools />
+      <TrainTools />
     </>
   );
 }

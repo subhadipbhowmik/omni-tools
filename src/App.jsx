@@ -22,6 +22,7 @@ import OnlineTextEditor from "./pages/writing/OnlineTextEditor";
 import GrammarChecker from "./pages/writing/GrammarChecker";
 import Loader from "./components/UI/Loader";
 import LetterWriting from "./pages/writing/LetterWriting";
+import PNRStatusChecker from "./pages/train/PNRStatusChecker";
 
 function App() {
   const location = useLocation();
@@ -69,6 +70,9 @@ function App() {
         <Route path="/online-text-editor" element={<OnlineTextEditor />} />
         <Route path="/grammar-checker" element={<GrammarChecker />} />
         <Route path="/letter-writing-generator" element={<LetterWriting />} />
+
+        {/* trains tools  */}
+        <Route path="/pnr-status-checker" element={<PNRStatusChecker />} />
       </Routes>
       <Footer />
     </>
