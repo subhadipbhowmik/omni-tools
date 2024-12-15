@@ -5,14 +5,14 @@ import toast from "react-hot-toast";
 function MyDialog({ isOpen, closeDialog }) {
   if (!isOpen) return null; // If dialog is closed, return nothing
 
-  const siteUrl = "https://optiseo.vercel.app/";
+  const siteUrl = "optiseo.vercel.app";
   function copyUrlText() {
     navigator.clipboard.writeText(siteUrl);
     toast.success("URL copied to clipboard!");
   }
 
   return (
-    <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50">
+    <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50 p-8">
       <div className="relative bg-white p-6 rounded-lg max-w-sm w-full">
         {/* Close Button */}
         <button
@@ -36,19 +36,10 @@ function MyDialog({ isOpen, closeDialog }) {
         </div>
 
         {/* Bio Link Section */}
-        <div className="flex items-center mt-6 gap-1">
-          <input
-            type="text"
-            value={siteUrl}
-            className="flex-1  px-4 py-2 border-2  border-indigo-300 rounded-l-lg focus:outline-none focus:ring-2 focus:ring-indigo-600"
-            readOnly
-          />
-          <button
-            onClick={copyUrlText}
-            className="px-4 py-2 bg-blue-500 text-white rounded-r-lg hover:bg-blue-600"
-          >
-            Copy
-          </button>
+        <div className="text-center">
+          <p className="py-2 border-2  border-indigo-300 rounded-lg">
+            {siteUrl}
+          </p>
         </div>
       </div>
     </div>
