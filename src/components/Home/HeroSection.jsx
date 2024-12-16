@@ -1,5 +1,5 @@
 import React from "react";
-import HeroImage from "../../assets/images/heroImage.png";
+import HeroImage from "../../assets/images/demo.png";
 
 const HeroSection = () => {
   return (
@@ -45,28 +45,45 @@ const HeroSection = () => {
             </span>{" "}
             tools to optimize your website effortlessly.
           </p>
-          <a
-            href="/tools"
-            className="w-full md:w-auto mb-14 inline-flex items-center justify-center py-3 px-7 text-base font-semibold text-center text-white rounded-full bg-indigo-600 shadow-xs hover:bg-indigo-700 transition-all duration-500"
-          >
-            Use Tools
-            <svg
-              className="ml-2"
-              width={20}
-              height={20}
-              viewBox="0 0 20 20"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
+
+          {/* Combined Use Tools button and Product Hunt Badge */}
+          <div className="flex flex-col md:flex-row items-center justify-center space-y-4 md:space-y-0 md:space-x-4 mb-14">
+            <a
+              href="/tools"
+              className="inline-flex items-center justify-center py-3 px-7 text-base font-semibold text-center text-white rounded-full bg-indigo-600 shadow-xs hover:bg-indigo-700 transition-all duration-500"
             >
-              <path
-                d="M7.5 15L11.0858 11.4142C11.7525 10.7475 12.0858 10.4142 12.0858 10C12.0858 9.58579 11.7525 9.25245 11.0858 8.58579L7.5 5"
-                stroke="white"
-                strokeWidth={2}
-                strokeLinecap="round"
-                strokeLinejoin="round"
+              Use Tools
+              <svg
+                className="ml-2"
+                width={16}
+                height={16}
+                viewBox="0 0 20 20"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M7.5 15L11.0858 11.4142C11.7525 10.7475 12.0858 10.4142 12.0858 10C12.0858 9.58579 11.7525 9.25245 11.0858 8.58579L7.5 5"
+                  stroke="white"
+                  strokeWidth={2}
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+              </svg>
+            </a>
+
+            <a
+              href="https://www.producthunt.com/products/optiseo?utm_source=badge-follow&utm_medium=badge&utm_souce=badge-optiseo"
+              target="_blank"
+              className="inline-flex items-center justify-center h-11"
+            >
+              <img
+                src="https://api.producthunt.com/widgets/embed-image/v1/follow.svg?product_id=813606&theme=light"
+                alt="OptiSEO - Optimize Your Website with Our Powerful SEO Tools | Product Hunt"
+                className="w-full h-full"
               />
-            </svg>
-          </a>
+            </a>
+          </div>
+
           <div className="flex justify-center">
             <img
               src={HeroImage}
