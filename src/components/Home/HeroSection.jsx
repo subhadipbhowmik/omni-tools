@@ -77,7 +77,7 @@ const HeroSection = () => {
               className="inline-flex items-center justify-center h-11"
             >
               <img
-                src="https://api.producthunt.com/widgets/embed-image/v1/follow.svg?product_id=813606&theme=light"
+                src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=706255&theme=light"
                 alt="OptiSEO - Optimize Your Website with Our Powerful SEO Tools | Product Hunt"
                 className="w-full h-full"
               />
