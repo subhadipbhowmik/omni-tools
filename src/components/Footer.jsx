@@ -17,12 +17,12 @@ const Footer = () => {
           <div className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-6 gap-3 gap-y-8 md:gap-8 py-10 max-w-sm mx-auto sm:max-w-3xl lg:max-w-full">
             <div className="col-span-full mb-10 lg:col-span-2 lg:mb-0">
               <a
-                href="https://optiseo.vercel.app/"
+                href="https://omnitools.vercel.app/"
                 className="flex justify-center lg:justify-start"
               >
                 <TrendingUp className="w-8 h-8 text-indigo-600" />
                 <span className="ml-2 text-xl font-bold text-indigo-600">
-                  OptiSEO
+                  OmniTools
                 </span>
               </a>
               <p className="py-8 text-sm text-gray-500 lg:max-w-xs text-center lg:text-left">
@@ -156,8 +156,8 @@ const Footer = () => {
             <div className="flex items-center justify-between flex-col lg:justify-between lg:flex-row">
               <div>
                 <span className="text-sm text-gray-500 ">
-                  ©<a href="https://optiseo.vercel.app/">OptiSEO</a> 2024, All
-                  rights reserved.
+                  ©<a href="https://omnitools.vercel.app/">OmniTools</a> 2024,
+                  All rights reserved.
                 </span>
               </div>
 

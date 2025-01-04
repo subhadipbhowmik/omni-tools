@@ -13,16 +13,16 @@ const Navbar = () => {
           {/* Logo Section */}
           <div className="flex items-center">
             <Link
-              to="https://optiseo.vercel.app/"
+              to="https://omnitools.vercel.app/"
               className="flex-shrink-0 flex items-center"
             >
               <a
-                href="https://optiseo.vercel.app/"
+                href="https://omnitools.vercel.app/"
                 className="flex items-center justify-center lg:justify-start"
               >
                 <TrendingUp className="w-8 h-8 text-indigo-600" />
                 <span className="ml-2 text-xl font-bold text-indigo-600">
-                  OptiSEO
+                  OmniTools
                 </span>
               </a>
             </Link>

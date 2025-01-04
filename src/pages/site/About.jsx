@@ -5,7 +5,7 @@ function About() {
   return (
     <>
       <Helmet>
-        <title>About | OptiSEO</title>
+        <title>About | OmniTools</title>
       </Helmet>
     </>
   );

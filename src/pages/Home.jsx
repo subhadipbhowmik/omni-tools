@@ -10,7 +10,7 @@ function Home() {
   return (
     <>
       <Helmet>
-        <title>Home | OptiSEO</title>
+        <title>Home | OmniTools</title>
         <meta
           name="description"
           content="Welcome to OptiSEO, the ultimate platform for all-in-one SEO tools designed to help you enhance your website's performance and achieve top search engine rankings."

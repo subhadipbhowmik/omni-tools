@@ -37,7 +37,7 @@ const HeroSection = () => {
           </h1>
           <p className="max-w-sm mx-auto text-center text-base font-normal leading-7 text-gray-500 mb-9">
             <span className="text-green-600 font-bold px-2 bg-green-100 rounded-full animate-typing">
-              OptiSEO
+              OMniTools
             </span>{" "}
             offers free online{" "}
             <span className="text-indigo-600 font-bold px-2 bg-indigo-100 rounded-full animate-bounceIn">

@@ -66,14 +66,14 @@ function DomainAgeChecker() {
   return (
     <>
       <Helmet>
-        <title>Domain Age Checker | OptiSEO</title>
+        <title>Domain Age Checker | OmniTools</title>
         <meta
           name="description"
           content="Check the age of any domain with OptiSEO's Domain Age Checker tool. Discover how long a domain has been active and its potential impact on SEO."
         />
         <link
           rel="canonical"
-          href="https://optiseo.vercel.app/domain-age-checker"
+          href="https://omnitools.vercel.app/domain-age-checker"
         />
         <meta
           name="keywords"
@@ -95,7 +95,7 @@ function DomainAgeChecker() {
         <meta property="og:type" content="website" />
         <meta
           property="og:url"
-          content="https://optiseo.vercel.app/domain-age-checker"
+          content="https://omnitools.vercel.app/domain-age-checker"
         />
         <meta property="og:locale" content="en_IN" />
 
@@ -113,7 +113,7 @@ function DomainAgeChecker() {
         <meta name="twitter:site" content="@YourTwitterHandle" />
 
         {/* Favicon */}
-        <link rel="icon" href="https://optiseo.vercel.app/favicon.ico" />
+        <link rel="icon" href="https://omnitools.vercel.app/favicon.ico" />
       </Helmet>
 
       <div className="min-h-screen bg-gray-900 text-white py-12 px-4 sm:px-6 lg:px-8">

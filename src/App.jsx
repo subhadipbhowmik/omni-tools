@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import { Routes, Route, useLocation } from "react-router-dom";
 import Home from "./pages/Home";
 import Navbar from "./components/Navbar";
@@ -57,6 +57,7 @@ function App() {
           path="/keyword-suggestion-tool"
           element={<KeywordSuggestion />}
         />
+        <Route path="/keyword-ckecker" element={<KeywordRankChecker />} />
         <Route path="/keyword-rank-checker" element={<KeywordRankChecker />} />
         <Route
           path="/keyword-density-checker"
@@ -70,6 +71,7 @@ function App() {
         <Route path="/online-text-editor" element={<OnlineTextEditor />} />
         <Route path="/grammar-checker" element={<GrammarChecker />} />
         <Route path="/letter-writing-generator" element={<LetterWriting />} />
+        <Route path="/report-writing-generator" element={<LetterWriting />} />
 
         {/* trains tools  */}
         <Route path="/pnr-status-checker" element={<PNRStatusChecker />} />

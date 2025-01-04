@@ -8,7 +8,7 @@ function AllTools() {
   return (
     <>
       <Helmet>
-        <title>Tools | OptiSEO</title>
+        <title>Tools | OmniTools</title>
         <meta
           name="description"
           content="Explore OptiSEO's powerful suite of SEO tools designed to optimize your website's performance and improve your search engine rankings. Find tools like Domain Age Checker, Keyword Rank Checker, and more."

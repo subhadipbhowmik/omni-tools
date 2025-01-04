@@ -5,7 +5,7 @@ import toast from "react-hot-toast";
 function MyDialog({ isOpen, closeDialog }) {
   if (!isOpen) return null; // If dialog is closed, return nothing
 
-  const siteUrl = "optiseo.vercel.app";
+  const siteUrl = "omnitools.vercel.app";
   function copyUrlText() {
     navigator.clipboard.writeText(siteUrl);
     toast.success("URL copied to clipboard!");
@@ -23,7 +23,7 @@ function MyDialog({ isOpen, closeDialog }) {
         </button>
 
         <h2 className="text-xl font-bold mb-6 text-center text-gray-800">
-          Share OptiSEO
+          Share OmniTools
         </h2>
 
         {/* QR Code */}
